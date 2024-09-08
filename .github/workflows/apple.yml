@@ -9,6 +9,10 @@ jobs:
     runs-on: macos-14
     steps:
       - run: brew install meson
+      - run: |
+          ninja --version || true
+          meson --version || true
+          python3 --version || true
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
