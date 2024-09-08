@@ -8,5 +8,6 @@ jobs:
   build:
     runs-on: macos-14
     steps:
+      - run: brew install meson
       - run: meson setup out/host .
       - run: meson compile -C out/host
