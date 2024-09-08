@@ -13,6 +13,7 @@ jobs:
           ninja --version || true
           meson --version || true
           python3 --version || true
+          uname -a
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
