@@ -1,0 +1,12 @@
+name: Meson 151 breaks on Apple
+
+on:
+  push:
+    branches: [ release, next ]
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - run: meson setup out/host .
+      - run: meson compile -C out/host
