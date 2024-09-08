@@ -9,5 +9,8 @@ jobs:
     runs-on: macos-14
     steps:
       - run: brew install meson
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - run: meson setup out/host .
       - run: meson compile -C out/host
